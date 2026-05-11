@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, Send, MapPin, Clock, ArrowUp, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/maton/logo.png';
 
 const footerLinks = [
   { label: 'Home', href: '/' },
@@ -162,7 +163,7 @@ const Footer: React.FC = () => {
             <div style={{ maxWidth: '280px' }}>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '24px' }}>
                 <img
-                  src="/src/assets/maton/logo.png"
+                  src={logo}
                   alt="Maton Oil and Gas"
                   style={{ height: '64px', width: 'auto', filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))' }}
                 />

@@ -1,12 +1,19 @@
 import React from 'react';
 
+import chevron from '../assets/maton/partners/chevron.png';
+import shell from '../assets/maton/partners/shell.png';
+import total from '../assets/maton/partners/total.png';
+import security from '../assets/maton/partners/security.png';
+import totalenergies from '../assets/maton/partners/totalenergies.png';
+import nnpc from '../assets/maton/partners/nnpc.png';
+
 const partners = [
-  { name: 'Chevron', src: '/src/assets/maton/partners/chevron.png' },
-  { name: 'Shell', src: '/src/assets/maton/partners/shell.png' },
-  { name: 'Total', src: '/src/assets/maton/partners/total.png' },
-  { name: 'Security', src: '/src/assets/maton/partners/security.png' },
-  { name: 'TotalEnergies', src: '/src/assets/maton/partners/totalenergies.png' },
-  { name: 'NNPC', src: '/src/assets/maton/partners/nnpc.png' },
+  { name: 'Chevron', src: chevron },
+  { name: 'Shell', src: shell },
+  { name: 'Total', src: total },
+  { name: 'Security', src: security },
+  { name: 'TotalEnergies', src: totalenergies },
+  { name: 'NNPC', src: nnpc },
 ];
 
 /**

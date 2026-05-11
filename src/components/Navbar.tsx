@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/maton/logo.png';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +56,7 @@ const Navbar: React.FC = () => {
             }}
           >
             <img 
-              src="/src/assets/maton/logo.png" 
+              src={logo} 
               alt="Maton Oil and Gas" 
               style={{ 
                 height: isScrolled ? '40px' : '56px', 
