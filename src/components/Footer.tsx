@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
     setStatus('submitting');
 
     try {
-      const response = await fetch('http://localhost/maton-oil-gas/backend/newsletter.php', {
+      const response = await fetch('https://matonoilandgas.com/backend/newsletter.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

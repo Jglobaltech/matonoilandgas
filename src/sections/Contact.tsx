@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://localhost/maton-oil-gas/backend/email.php', {
+      const response = await fetch('https://matonoilandgas.com/backend/email.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
