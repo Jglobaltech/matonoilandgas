@@ -12,7 +12,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <Phone size={24} />,
       title: "Phone",
-      value: "+234 703 581 8163",
+      value: "+234 913 444 9881",
       sub: "Have a question? Call now"
     },
     {

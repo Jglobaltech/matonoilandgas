@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '14px', textTransform: 'uppercase', marginBottom: '4px' }}>Phone</h4>
-                  <p style={{ color: 'var(--color-text-muted)', fontSize: '15px' }}>+234 703 581 8163</p>
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '15px' }}>+234 913 444 9881</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>

@@ -149,7 +149,7 @@ const Navbar: React.FC = () => {
           textAlign: 'center' 
         }}>
           info@matonoilandgas.com<br />
-          +234 806 756 1091
+          +234 913 444 9881
         </p>
       </div>
     </>

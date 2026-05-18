@@ -298,7 +298,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li style={{ display: 'flex', gap: '12px', color: 'rgba(255,255,255,0.5)', fontSize: '13px' }}>
                   <Phone size={16} style={{ color: 'var(--color-primary)', flexShrink: 0, marginTop: '2px' }} />
-                  +234 703 581 8163
+                  +234 913 444 9881
                 </li>
                 <li style={{ display: 'flex', gap: '12px', color: 'rgba(255,255,255,0.5)', fontSize: '13px' }}>
                   <Mail size={16} style={{ color: 'var(--color-primary)', flexShrink: 0, marginTop: '2px' }} />
