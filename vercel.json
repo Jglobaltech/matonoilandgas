@@ -3,6 +3,10 @@
     {
       "source": "/backend/:path*",
       "destination": "http://67.223.119.150/backend/:path*"
+    },
+    {
+      "source": "/((?!backend).*)*",
+      "destination": "/index.html"
     }
   ]
 }
