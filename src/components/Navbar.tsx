@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/maton/logo.png';
+import { getApiUrl } from '../utils/api';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,11 +22,25 @@ const Navbar: React.FC = () => {
     return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
+  const [careersVisible, setCareersVisible] = useState<boolean>(true);
+
+  useEffect(() => {
+    fetch(getApiUrl('settings.php?action=public'))
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.status === 'success') {
+          setCareersVisible(data.settings.careers_visible !== '0');
+        }
+      })
+      .catch(err => console.error('Failed to load settings in navbar:', err));
+  }, []);
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Operations', href: '/operations' },
+    ...(careersVisible ? [{ name: 'Careers', href: '/careers' }] : []),
     { name: 'Contact', href: '/contact' },
   ];
 

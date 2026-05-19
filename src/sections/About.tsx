@@ -30,7 +30,7 @@ const About: React.FC = () => {
             zIndex: 2
           }} />
           <img 
-            src="/images/oilandgas.jpg" 
+            src="./images/oilandgas.jpg" 
             alt="Maton Oil & Gas Operations" 
             style={{ 
               width: '100%',

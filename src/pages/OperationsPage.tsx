@@ -73,7 +73,7 @@ const OperationsPage: React.FC = () => {
     <div className="operations-page" style={{ paddingTop: '80px' }}>
       {/* Header Section */}
       <section style={{ 
-        background: 'linear-gradient(rgba(5, 10, 5, 0.9), rgba(5, 10, 5, 0.95)), url(/images/pipeline-welding.jpg)', 
+        background: 'linear-gradient(rgba(5, 10, 5, 0.9), rgba(5, 10, 5, 0.95)), url(./images/pipeline-welding.jpg)', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

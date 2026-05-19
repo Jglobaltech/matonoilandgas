@@ -499,4 +499,186 @@ img {
   opacity: 0.85;
 }
 
+/* Responsive Careers Card */
+.career-card {
+  background: var(--color-white);
+  padding: 35px 40px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--radius-premium);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .career-card {
+    padding: 24px 24px !important;
+    gap: 16px !important;
+  }
+  
+  .career-card-btn-wrap {
+    width: 100% !important;
+  }
+}
+
+/* Responsive Job Details Page Grid & Sidebar */
+.job-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 60px;
+  align-items: start;
+}
+
+.job-detail-sidebar {
+  background: var(--color-bg-light);
+  padding: 40px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--radius-premium);
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .job-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-detail-sidebar {
+    padding: 24px !important;
+    position: static !important;
+  }
+}
+
+/* Settings Dashboard Tab Responsive Styling */
+.settings-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+}
+
+.settings-toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .settings-card {
+    padding: 20px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .settings-toggle-container {
+    padding: 16px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+}
+
+/* Premium Minimalist Scrollbars (Tiny & Grey) */
+::-webkit-scrollbar {
+  width: 5px; /* Vertical width */
+  height: 5px; /* Horizontal height */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+/* Firefox Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.02);
+}
+
+/* Responsive Careers / Job Form Modal */
+.job-modal-container {
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+  border: 1px solid var(--color-gray);
+}
+
+.job-modal-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.job-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .job-modal-container {
+    padding: 28px 20px !important;
+    max-height: 95vh !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .job-modal-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-modal-actions {
+    flex-direction: column-reverse !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .job-modal-actions button {
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+
 

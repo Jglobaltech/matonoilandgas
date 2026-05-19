@@ -57,7 +57,7 @@ const Operations: React.FC = () => {
           zIndex: 1
         }} />
         <img 
-          src="/images/pipeline-welding.jpg"
+          src="./images/pipeline-welding.jpg"
           alt="Maton Oil & Gas Pipeline Operations"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />

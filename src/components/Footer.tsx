@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, Send, MapPin, Clock, ArrowUp, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import logo from '../assets/maton/logo.png';
+import { getApiUrl } from '../utils/api';
 
-const footerLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Services', href: '/services' },
-  { label: 'Operations', href: '/operations' },
-  { label: 'Contact', href: '/contact' },
-];
+
 
 const services = [
   'Oil & Gas Services',
@@ -24,6 +20,27 @@ const Footer: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [careersVisible, setCareersVisible] = useState<boolean>(true);
+
+  useEffect(() => {
+    fetch(getApiUrl('settings.php?action=public'))
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.status === 'success') {
+          setCareersVisible(data.settings.careers_visible !== '0');
+        }
+      })
+      .catch(err => console.error('Failed to load settings in footer:', err));
+  }, []);
+
+  const activeFooterLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Operations', href: '/operations' },
+    ...(careersVisible ? [{ label: 'Careers', href: '/careers' }] : []),
+    { label: 'Contact', href: '/contact' },
+  ];
 
   useEffect(() => {
     const checkScroll = () => {
@@ -77,7 +94,7 @@ const Footer: React.FC = () => {
   return (
     <footer style={{ 
       position: 'relative',
-      background: 'linear-gradient(rgba(5, 10, 5, 0.92), rgba(5, 10, 5, 0.98)), url(/images/industry.png)', 
+      background: 'linear-gradient(rgba(5, 10, 5, 0.92), rgba(5, 10, 5, 0.98)), url(./images/industry.png)', 
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed',
@@ -242,21 +259,22 @@ const Footer: React.FC = () => {
                 fontWeight: 800
               }}>Quick Links</h4>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {footerLinks.map((link) => (
+                {activeFooterLinks.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       style={{
                         color: 'rgba(255,255,255,0.5)',
                         fontSize: '13px',
                         fontWeight: 500,
-                        transition: 'color 0.3s ease'
+                        transition: 'color 0.3s ease',
+                        textDecoration: 'none'
                       }}
                       onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-primary)'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

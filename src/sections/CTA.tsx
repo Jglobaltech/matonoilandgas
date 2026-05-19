@@ -16,7 +16,7 @@ const CTA: React.FC = () => {
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(to right, rgba(0, 170, 95, 0.92), rgba(15, 26, 15, 0.95)), url(/images/pipeline-welding.jpg)',
+        background: 'linear-gradient(to right, rgba(0, 170, 95, 0.92), rgba(15, 26, 15, 0.95)), url(./images/pipeline-welding.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

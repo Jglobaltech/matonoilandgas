@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
     <div className="about-page" style={{ paddingTop: '80px' }}>
       {/* Header Section */}
       <section style={{ 
-        background: 'linear-gradient(rgba(5, 10, 5, 0.9), rgba(5, 10, 5, 0.95)), url(/images/oilandgas.jpg)', 
+        background: 'linear-gradient(rgba(5, 10, 5, 0.9), rgba(5, 10, 5, 0.95)), url(./images/oilandgas.jpg)', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

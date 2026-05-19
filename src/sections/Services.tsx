@@ -7,38 +7,38 @@ const Services: React.FC = () => {
     { 
       title: "Oil And Gas Services", 
       desc: "Upstream and downstream energy solutions, including filling station operations.",
-      image: "/images/oilandgas.jpg",
-      icon: "/icons/oilandgas.png"
+      image: "./images/oilandgas.jpg",
+      icon: "./icons/oilandgas.png"
     },
     { 
       title: "Welding & Fabrication", 
       desc: "Precision scaffolding, sandblasting, and heavy-duty structural welding.",
-      image: "/images/pipeline-welding.jpg",
-      icon: "/icons/welding.png"
+      image: "./images/pipeline-welding.jpg",
+      icon: "./icons/welding.png"
     },
     { 
       title: "Engineering Construction", 
       desc: "Infrastructure development including roads, bridges, and industrial maintenance.",
-      image: "/images/engineering-construction.jpg",
-      icon: "/icons/engineeering.png"
+      image: "./images/engineering-construction.jpg",
+      icon: "./icons/engineeering.png"
     },
     { 
       title: "Agriculture & Farming", 
       desc: "Mechanized farming and sustainable food crop production for regional growth.",
-      image: "/images/industrial-farming.jpg",
-      icon: "/icons/agriculture.png"
+      image: "./images/industrial-farming.jpg",
+      icon: "./icons/agriculture.png"
     },
     { 
       title: "Equipment Leasing", 
       desc: "Rental and maintenance of heavy-duty plant machinery and construction gear.",
-      image: "/images/equipment-leasing.jpg",
-      icon: "/icons/equipments.png"
+      image: "./images/equipment-leasing.jpg",
+      icon: "./icons/equipments.png"
     },
     { 
       title: "Waste Management", 
       desc: "Site remediation, industrial waste logistics, and professional sanitation.",
-      image: "/images/waste-management.jpg",
-      icon: "/icons/waste.png"
+      image: "./images/waste-management.jpg",
+      icon: "./icons/waste.png"
     }
   ];
 
@@ -54,7 +54,7 @@ const Services: React.FC = () => {
   return (
     <section id="services" className="section" style={{ 
       position: 'relative',
-      background: `linear-gradient(rgba(5, 10, 5, 0.95), rgba(5, 10, 5, 0.92)), url(/slider/1778115458205.jpg)`, 
+      background: `linear-gradient(rgba(5, 10, 5, 0.95), rgba(5, 10, 5, 0.92)), url(./slider/1778115458205.jpg)`, 
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed',
